@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="step-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e3f2fd" />
+      <stop offset="100%" stop-color="#bbdefb" />
+    </linearGradient>
+    
+    <linearGradient id="prep-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e8eaf6" />
+      <stop offset="100%" stop-color="#c5cae9" />
+    </linearGradient>
+    
+    <linearGradient id="sort-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f3e5f5" />
+      <stop offset="100%" stop-color="#e1bee7" />
+    </linearGradient>
+    
+    <linearGradient id="collect-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e8f5e9" />
+      <stop offset="100%" stop-color="#c8e6c9" />
+    </linearGradient>
+    
+    <linearGradient id="analyze-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff3e0" />
+      <stop offset="100%" stop-color="#ffe0b2" />
+    </linearGradient>
+    
+    <linearGradient id="apply-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fce4ec" />
+      <stop offset="100%" stop-color="#f8bbd0" />
+    </linearGradient>
+    
+    <!-- Vesicle gradients -->
+    <radialGradient id="vesicle-neg" cx="50%" cy="50%" r="50%" fx="30%" fy="30%">
+      <stop offset="0%" stop-color="#bbdefb" />
+      <stop offset="100%" stop-color="#1976d2" />
+    </radialGradient>
+    
+    <radialGradient id="vesicle-norm" cx="50%" cy="50%" r="50%" fx="30%" fy="30%">
+      <stop offset="0%" stop-color="#e1bee7" />
+      <stop offset="100%" stop-color="#7b1fa2" />
+    </radialGradient>
+    
+    <radialGradient id="vesicle-pos" cx="50%" cy="50%" r="50%" fx="30%" fy="30%">
+      <stop offset="0%" stop-color="#ffccbc" />
+      <stop offset="100%" stop-color="#e64a19" />
+    </radialGradient>
+    
+    <!-- Filter for glow effect -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- Arrow marker -->
+    <marker id="arrow-marker" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#546e7a" />
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#fafafa" />
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#263238">ExoSort-MEP Workflow</text>
+  
+  <!-- Step 1: Sample Preparation -->
+  <g transform="translate(50, 100)">
+    <rect x="0" y="0" width="200" height="80" rx="10" ry="10" fill="url(#prep-gradient)" stroke="#3f51b5" stroke-width="2" />
+    <text x="100" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#1a237e">1. Sample Preparation</text>
+    <text x="100" y="55" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#303f9f">Prepare EVs with different</text>
+    <text x="100" y="70" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#303f9f">charge magnitudes</text>
+    
+    <!-- Mixed vesicles -->
+    <g transform="translate(100, -20)">
+      <circle cx="-30" cy="-10" r="8" fill="url(#vesicle-neg)" filter="url(#glow)" />
+      <circle cx="-15" cy="-15" r="6" fill="url(#vesicle-norm)" filter="url(#glow)" />
+      <circle cx="0" cy="-10" r="7" fill="url(#vesicle-pos)" filter="url(#glow)" />
+      <circle cx="15" cy="-15" r="5" fill="url(#vesicle-neg)" filter="url(#glow)" />
+      <circle cx="30" cy="-10" r="6" fill="url(#vesicle-norm)" filter="url(#glow)" />
+    </g>
+  </g>
+  
+  <!-- Step 2: Electric Field Application -->
+  <g transform="translate(50, 230)">
+    <rect x="0" y="0" width="200" height="80" rx="10" ry="10" fill="url(#sort-gradient)" stroke="#9c27b0" stroke-width="2" />
+    <text x="100" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#4a148c">2. Electric Field</text>
+    <text x="100" y="55" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#6a1b9a">Apply DC (electrophoresis) or</text>
+    <text x="100" y="70" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#6a1b9a">AC (dielectrophoresis) fields</text>
+    
+    <!-- Electric field illustration -->
+    <g transform="translate(40, 40)" opacity="0.5">
+      <line x1="0" y1="0" x2="120" y2="0" stroke="#7b1fa2" stroke-width="1" stroke-dasharray="5,3" />
+      <line x1="0" y1="-10" x2="120" y2="-10" stroke="#7b1fa2" stroke-width="1" stroke-dasharray="5,3" />
+      <line x1="0" y1="10" x2="120" y2="10" stroke="#7b1fa2" stroke-width="1" stroke-dasharray="5,3" />
+      <rect x="0" y="-15" width="5" height="30" fill="#7b1fa2" />
+      <rect x="115" y="-15" width="5" height="30" fill="#7b1fa2" />
+    </g>
+  </g>
+  
+  <!-- Step 3: Vesicle Sorting -->
+  <g transform="translate(50, 360)">
+    <rect x="0" y="0" width="200" height="80" rx="10" ry="10" fill="url(#collect-gradient)" stroke="#4caf50" stroke-width="2" />
+    <text x="100" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#1b5e20">3. Sorting & Collection</text>
+    <text x="100" y="55" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2e7d32">Classify and store vesicles</text>
+    <text x="100" y="70" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2e7d32">by membrane potential</text>
+    
+    <!-- Collection containers -->
+    <g transform="translate(100, 100)">
+      <rect x="-60" y="0" width="30" height="40" rx="3" ry="3" fill="#e3f2fd" stroke="#1565c0" stroke-width="1" />
+      <rect x="-15" y="0" width="30" height="40" rx="3" ry="3" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="1" />
+      <rect x="30" y="0" width="30" height="40" rx="3" ry="3" fill="#ffccbc" stroke="#d84315" stroke-width="1" />
+      
+      <text x="-45" y="-5" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#1565c0">−−</text>
+      <text x="0" y="-5" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#6a1b9a">−</text>
+      <text x="45" y="-5" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#d84315">+</text>
+    </g>
+  </g>
+  
+  <!-- Step 4: Analysis -->
+  <g transform="translate(300, 100)">
+    <rect x="0" y="0" width="200" height="80" rx="10" ry="10" fill="url(#analyze-gradient)" stroke="#ff9800" stroke-width="2" />
+    <text x="100" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#e65100">4. Characterization</text>
+    <text x="100" y="55" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#ef6c00">Analyze sorted vesicles for</text>
+    <text x="100" y="70" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#ef6c00">content and properties</text>
+    
+    <!-- Analysis tools -->
+    <g transform="translate(50, -20)">
+      <circle cx="40" cy="-5" r="10" fill="none" stroke="#ef6c00" stroke-width="1" />
+      <path d="M48,-5 L65,-5" stroke="#ef6c00" stroke-width="3" />
+      <path d="M55,-15 L55,5" stroke="#ef6c00" stroke-width="3" />
+      <path d="M40,-15 L60,15" stroke="#ef6c00" stroke-width="1" stroke-dasharray="2,1" />
+    </g>
+  </g>
+  
+  <!-- Step 5: Modification -->
+  <g transform="translate(300, 230)">
+    <rect x="0" y="0" width="200" height="80" rx="10" ry="10" fill="url(#apply-gradient)" stroke="#e91e63" stroke-width="2" />
+    <text x="100" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#880e4f">5. Modification</text>
+    <text x="100" y="55" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#ad1457">Add therapeutic cargo or</text>
+    <text x="100" y="70" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#ad1457">enhance targeting properties</text>
+    
+    <!-- Vesicle customization -->
+    <g transform="translate(100, 100)">
+      <circle cx="0" cy="0" r="20" fill="url(#vesicle-neg)" stroke="#1565c0" stroke-width="1.5" filter="url(#glow)" />
+      
+      <!-- Drug molecules -->
+      <circle cx="-5" cy="-5" r="4" fill="#ff5722" />
+      <circle cx="5" cy="5" r="3" fill="#ff5722" />
+      <circle cx="0" cy="-10" r="3" fill="#ff5722" />
+      
+      <!-- Targeting proteins -->
+      <rect x="-10" y="-20" width="4" height="6" rx="1" ry="1" fill="#26a69a" />
+      <rect x="6" y="-18" width="4" height="6" rx="1" ry="1" fill="#26a69a" />
+      <rect x="16" y="-8" width="4" height="6" rx="1" ry="1" fill="#26a69a" />
+      <rect x="18" y="5" width="4" height="6" rx="1" ry="1" fill="#26a69a" />
+      <rect x="8" y="16" width="4" height="6" rx="1" ry="1" fill="#26a69a" />
+      <rect x="-10" y="16" width="4" height="6" rx="1" ry="1" fill="#26a69a" />
+      <rect x="-20" y="8" width="4" height="6" rx="1" ry="1" fill="#26a69a" />
+      <rect x="-20" y="-8" width="4" height="6" rx="1" ry="1" fill="#26a69a" />
+    </g>
+  </g>
+  
+  <!-- Step 6: Application -->
+  <g transform="translate(300, 360)">
+    <rect x="0" y="0" width="200" height="80" rx="10" ry="10" fill="url(#step-gradient)" stroke="#2196f3" stroke-width="2" />
+    <text x="100" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#0d47a1">6. Application</text>
+    <text x="100" y="55" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1565c0">Clinical or research use of</text>
+    <text x="100" y="70" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1565c0">sorted/modified vesicles</text>
+    
+    <!-- Clinical applications -->
+    <g transform="translate(100, 100)">
+      <path d="M-30,-10 L30,10" stroke="#1565c0" stroke-width="2" fill="none" />
+      <path d="M-30,10 L30,-10" stroke="#1565c0" stroke-width="2" fill="none" />
+      <circle cx="0" cy="0" r="30" stroke="#1565c0" stroke-width="2" fill="none" />
+      
+      <!-- Medical symbol -->
+      <g transform="translate(60, 0)">
+        <circle cx="0" cy="0" r="15" fill="#b3e5fc" stroke="#1565c0" stroke-width="1" />
+        <rect x="-2" y="-8" width="4" height="16" fill="#1565c0" />
+        <rect x="-8" y="-2" width="16" height="4" fill="#1565c0" />
+      </g>
+    </g>
+  </g>
+  
+  <!-- Detailed Workflow Section -->
+  <g transform="translate(550, 100)">
+    <rect x="0" y="0" width="200" height="340" rx="10" ry="10" fill="#e8eaf6" stroke="#3f51b5" stroke-width="2" />
+    <text x="100" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#1a237e">Detailed Workflow</text>
+    
+    <!-- Connection lines for workflow -->
+    <line x1="40" y1="50" x2="40" y2="300" stroke="#3f51b5" stroke-width="2" stroke-dasharray="5,3" />
+    
+    <!-- Timeline steps -->
+    <g transform="translate(40, 70)">
+      <circle cx="0" cy="0" r="8" fill="#3f51b5" />
+      <text x="15" y="5" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#303f9f">EV Isolation</text>
+    </g>
+    
+    <g transform="translate(40, 110)">
+      <circle cx="0" cy="0" r="8" fill="#3f51b5" />
+      <text x="15" y="5" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#303f9f">Buffer Preparation</text>
+    </g>
+    
+    <g transform="translate(40, 150)">
+      <circle cx="0" cy="0" r="8" fill="#3f51b5" />
+      <text x="15" y="5" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#303f9f">Electrophoresis Setup</text>
+    </g>
+    
+    <g transform="translate(40, 190)">
+      <circle cx="0" cy="0" r="8" fill="#3f51b5" />
+      <text x="15" y="5" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#303f9f">Voltage Application</text>
+    </g>
+    
+    <g transform="translate(40, 230)">
+      <circle cx="0" cy="0" r="8" fill="#3f51b5" />
+      <text x="15" y="5" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#303f9f">Fraction Collection</text>
+    </g>
+    
+    <g transform="translate(40, 270)">
+      <circle cx="0" cy="0" r="8" fill="#3f51b5" />
+      <text x="15" y="5" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#303f9f">Analysis & Application</text>
+    </g>
+  </g>
+  
+  <!-- Connection Arrows -->
+  <g stroke="#546e7a" stroke-width="2" fill="none" marker-end="url(#arrow-marker)">
+    <!-- Step 1 to Step 2 -->
+    <path d="M150,180 L150,230" />
+    
+    <!-- Step 2 to Step 3 -->
+    <path d="M150,310 L150,360" />
+    
+    <!-- Step 3 to Step 4 -->
+    <path d="M250,400 L300,140" />
+    
+    <!-- Step 4 to Step 5 -->
+    <path d="M400,180 L400,230" />
+    
+    <!-- Step 5 to Step 6 -->
+    <path d="M400,310 L400,360" />
+  </g>
+  
+  <!-- Dynamic Animation for Vesicle Movement -->
+  <g>
+    <!-- Flowing vesicles animation from Step 1 to Step 2 -->
+    <circle cx="150" cy="200" r="5" fill="url(#vesicle-neg)" filter="url(#glow)">
+      <animate attributeName="cy" values="180;230" dur="3s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="160" cy="190" r="4" fill="url(#vesicle-norm)" filter="url(#glow)">
+      <animate attributeName="cy" values="180;230" dur="4s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="140" cy="210" r="6" fill="url(#vesicle-pos)" filter="url(#glow)">
+      <animate attributeName="cy" values="180;230" dur="2.5s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Flowing vesicles animation from Step 2 to Step 3 -->
+    <circle cx="150" cy="330" r="5" fill="url(#vesicle-neg)" filter="url(#glow)">
+      <animate attributeName="cy" values="310;360" dur="3s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="160" cy="340" r="4" fill="url(#vesicle-norm)" filter="url(#glow)">
+      <animate attributeName="cy" values="310;360" dur="3.5s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="140" cy="320" r="6" fill="url(#vesicle-pos)" filter="url(#glow)">
+      <animate attributeName="cy" values="310;360" dur="2.8s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Flowing vesicles animation from Step 3 to Step 4 -->
+    <path id="path-to-analysis" d="M250,400 C275,350 300,300 300,140" fill="none" />
+    <circle cx="0" cy="0" r="5" fill="url(#vesicle-neg)" filter="url(#glow)">
+      <animateMotion dur="3s" repeatCount="indefinite" path="M250,400 C275,350 300,300 300,140" />
+    </circle>
+  </g>
+  
+  <!-- Footer Text -->
+  <text x="400" y="560" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#37474f">Patent Pending Technology</text>
+</svg>
