@@ -86,8 +86,13 @@ See the [Documentation](doc/) for comprehensive guides on:
 
 ## Simulations
 
-Try our [web-based simulation](deployment/simulation/) to visualize the sorting process and predict outcomes with different parameters.
+![Simulation Results](doc/images/simulation_results.svg)
+
+Try our [web-based simulation](https://github.com/JJshome/ExoSort-MEP/tree/main/deployment/simulation) to visualize the sorting process and predict outcomes with different parameters.
 
 ---
 
-Patent Pending
+Patent Pending  
+출원번호 10-2020-0103049  
+출원일자 2020년08월18일  
+World 1st Conceptual Patent
