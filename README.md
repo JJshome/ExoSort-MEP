@@ -92,7 +92,7 @@ Try our [web-based simulation](https://github.com/JJshome/ExoSort-MEP/tree/main/
 
 ---
 
-Patent Pending  
-출원번호 10-2020-0103049  
-출원일자 2020년08월18일  
-World 1st Conceptual Patent
+Patent Pending
+Application Number: 10-2020-0103049
+Filing Date: August 18, 2020
+World's First Conceptual Patent
