@@ -7,4 +7,4 @@ AC dielectrophoresis techniques.
 """
 
 __version__ = "0.1.0"
-__author__ = "JiWhan Jang"
+__author__ = "Jee Hwan Jang"
